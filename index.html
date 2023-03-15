@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta name="description" content="RV2000 Official web" />
+  <meta charset="utf-8">
+  <title>RV2000</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+</head>
+
+<body>
+ 
+    <div id = "maindiv">
+        <div class="container">
+            <script type="application/processing">
+                float[] circleY = new float[25];
+
+                
+
+                void setup() {
+                    size($(maindiv).width(),$(maindiv).height());
+                for (int i = 0; i < circleY.length; i++) {
+                    circleY[i] = random(height);
+                    }
+                }
+
+                void draw() {
+                    background(0);
+
+                    textSize(128);
+                    fill(57,255,20);
+                    text("RV2000", $(maindiv).width()/2-100 , $(maindiv).height()/2+50);
+                    
+
+                    for (int i = 0; i < circleY.length; i++) {
+
+                        char[] letters = ["R","V","2","0"];
+
+                        float circleX = width * i / circleY.length;
+                        
+                    
+                        textSize(12);
+                        fill(57,255,20);
+                        text(letters[int(random(4))], circleX, circleY[i]);
+
+                        circleY[i]++;
+
+                        if (circleY[i] > height) {
+                        circleY[i] = 0;
+                        }
+                    }
+                }
+            </script>
+            <canvas> </canvas>
+        </div>
+
+    </div>
+    <div id = "pad">
+
+    </div>
+    <div class="containeer">
+        <div class="left">
+            <div id = "maindiv">
+                <!-- <ul>
+                    <li>
+                        <a class="instagram" href="sjfsfsfkdfnskfdlsnfkelnkel">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </li>
+                </ul> -->
+                <a>
+                    fdgs
+                    sdgdsg
+                    dfsdgds
+                    gsdsdgsd
+                    LINKS
+                </a>
+            </div>
+            
+                
+        </div>
+        <div class = "right">
+            <div id= "maindiv">
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1570719820&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #000000;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/emeline-soldati" title="RV2000" target="_blank" style="color: #cccccc; text-decoration: none;">RV2000</a> · <a href="https://soundcloud.com/emeline-soldati/sets/pinata" title="PINATA" target="_blank" style="color: #cccccc; text-decoration: none;">PINATA</a></div>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    
+
+<script>
+</script>
+
+</body>
+</html>
